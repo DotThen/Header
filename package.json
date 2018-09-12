@@ -4,26 +4,37 @@
   "description": "header_for_spotify",
   "author": "david_hong",
   "license": "UNLICENSED",
-  "engines": {
-    "node": ">=6.13.0"
-  },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "node server/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-hot-loader": "^4.3.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
     "body-parser": "^1.18.3",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "console-stamp": "^0.2.6",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.6.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "express": "^4.16.3",
     "faker": "^4.1.0",
+    "jest": "^23.5.0",
     "mongoose": "^5.2.13",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
+    "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1",
+    "webpack-dev-middleware": "^3.2.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-hot-middleware": "^2.23.1"
   }
 }
