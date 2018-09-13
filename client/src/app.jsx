@@ -12,7 +12,7 @@ const getArtistInfo = callback => {
       callback(response.data[0]);
     })
     .catch(error => {
-      console.error(error);
+      // console.error(error);
     });
 };
 
