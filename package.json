@@ -1,23 +1,29 @@
 {
   "name": "spotify-header",
+  "jest": {},
   "version": "1.0.0",
   "description": "header_for_spotify",
   "author": "david_hong",
   "license": "UNLICENSED",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "node server/index.js"
+    "server-dev": "node server/index.js",
+    "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-hot-loader": "^4.3.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.0-beta.6",
     "body-parser": "^1.18.3",
     "console-stamp": "^0.2.6",
     "css-loader": "^1.0.0",
@@ -26,9 +32,11 @@
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "jest": "^23.5.0",
+    "jest-enzyme": "^6.0.4",
     "mongoose": "^5.2.13",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
+    "regenerator-runtime": "^0.12.1",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",

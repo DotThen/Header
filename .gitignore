@@ -24,3 +24,5 @@ coverage
 build/
 dist/
 
+# jest test coverage report
+jestOutput/

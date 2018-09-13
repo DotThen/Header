@@ -20,7 +20,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devtool: '#source-map',
-  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.NoEmitOnErrorsPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin() /* , new webpack.NoEmitOnErrorsPlugin() */],
   module: {
     rules: [
       {
