@@ -5,12 +5,11 @@ module.exports = {
   setupTestFrameworkScriptFile: './node_modules/jest-enzyme/lib/index.js',
   unmockedModulePathPatterns: ['react', 'enzyme', 'jest-enzyme'],
   verbose: true,
+  testEnvironment: 'node',
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
-    '/spec/',
     '/jestOutput/',
-    '/database/',
     '.babelrc',
     '.eslintrc.js',
     '.gitignore',
