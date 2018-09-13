@@ -12,10 +12,11 @@ describe('Express Server', function() {
     mongoose.disconnect(done);
   });
   // trying to figure out how to get the first test to work
-  test('It should response the GET method', done => {
-    return request(server)
-      .get('/artists/a')
-      .expect(400, done);
+  it('It should response the GET method', done => {
+    request(server)
+      .get('/artists/1')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
   });
 
   it('responds to GET to /artists/1 with JSON object', done => {

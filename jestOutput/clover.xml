@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1536860785556" clover="3.2.0">
-  <project timestamp="1536860785556" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
+<coverage generated="1536865291892" clover="3.2.0">
+  <project timestamp="1536865291892" name="All files">
+    <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0" elements="14" coveredelements="0" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1">
+      <file name="seeder.js" path="/Users/davidhong/Desktop/HackReactor/hrsf101-front-end-capstone/database/seeder.js">
+        <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
     </metrics>
   </project>
 </coverage>
