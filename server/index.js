@@ -57,3 +57,5 @@ app.listen(process.env.PORT || 3004, function onStart(err) {
   }
   console.info(`==> 🌎 Listening on port %s. Open up http://127.0.0.1:${process.env.PORT || 3004}/ in your browser.`);
 });
+
+module.exports = app;
