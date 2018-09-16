@@ -1,9 +1,9 @@
-var request = require('supertest');
-var server = require('../index');
+const request = require('supertest');
+const server = require('../index');
 const mongoose = require('mongoose');
 
 describe('Express Server', function() {
-  // var server;
+  // const server;
   beforeAll(() => {
     mongoose.connect('mongodb://localhost:27017/spotify');
   });

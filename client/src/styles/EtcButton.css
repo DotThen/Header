@@ -1,0 +1,104 @@
+/****** DROP DOWN SECTION ******/
+
+:global(.dropdown-menu + .dropdown-submenu) {
+  background-color: #282828 !important;
+}
+:global(.dropdown-item) {
+  background-color: #282828 !important;
+  color: #c7c7c7 !important;
+  padding: 0.2em 1rem !important;
+}
+:global(.dropdown-item:hover) {
+  background-color: #404040 !important;
+}
+
+:global(.dropdown-submenu) {
+  position: relative;
+}
+
+:global(.dropdown-submenu > .dropdown-menu) {
+  background-color: #282828 !important;
+  top: 0;
+  left: 100%;
+  margin-top: -3px;
+  margin-left: -1px;
+  border-radius: 6px;
+  width: 230px;
+}
+
+:global(.dropdown-submenu:hover > .dropdown-menu) {
+  display: block;
+}
+
+/* The ::after selector inserts something after the content of each selected element(s).
+Use the content property to specify the content to insert.
+Use the ::before selector to insert something before the content. */
+
+:global(.dropdown-submenu > a:after) {
+  color: #c7c7c7 !important;
+  content: '\25BA';
+  top: -2px;
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 1px;
+}
+
+:global(.dropdown-submenu.pull-left) {
+  float: none;
+}
+
+:global(.dropdown-submenu.pull-left > .dropdown-menu) {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+:global(li > a) {
+  color: #c7c7c7 !important;
+  fill: #c7c7c7;
+  user-select: none;
+}
+
+:global(li > a:hover) {
+  color: white !important;
+  fill: white;
+  text-decoration: none;
+}
+
+:global(.dropdown-divider) {
+  border-color: #404040 !important;
+}
+:global(ul) {
+  background-color: #282828 !important;
+}
+
+/* icon SOURCE: https://material.io/tools/icons &https://simpleicons.org/ */
+
+:global(.etcDropDown > svg) {
+  size: 15px;
+  padding-bottom: 5px;
+  width: 14%;
+  margin-right: 10px;
+}
+
+:global(a:hover .facebook) {
+  fill: #3b5998;
+}
+
+:global(a:hover .messenger) {
+  fill: #0084ff;
+}
+
+:global(a:hover .twitter) {
+  fill: #1da1f2;
+}
+:global(a:hover .telegram) {
+  fill: #2ca5e0;
+}
+:global(a:hover .skype) {
+  fill: #00aff0;
+}
+:global(a:hover .tumblr) {
+  fill: rgb(124, 140, 163);
+}

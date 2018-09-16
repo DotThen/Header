@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/spotify');
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', error => {
   console.error(error);
 });
@@ -9,7 +9,7 @@ db.once('open', () => {
   console.log('MONGOOSE CONNECTED!');
 });
 
-var headerDBSchema = new mongoose.Schema({
+const headerDBSchema = new mongoose.Schema({
   artistID: {
     type: Number,
     unique: true
@@ -24,11 +24,11 @@ var headerDBSchema = new mongoose.Schema({
   }
 });
 
-var HeaderDB = mongoose.model('HeaderDB', headerDBSchema);
+const HeaderDB = mongoose.model('HeaderDB', headerDBSchema);
 module.exports = HeaderDB;
 
 // NOTE: To be used later
-// var userSchema = new mongoose.Schema({
+// const userSchema = new mongoose.Schema({
 //   userID: {
 //     type: Number,
 //     unique: true

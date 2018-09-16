@@ -44,9 +44,7 @@
   box-sizing: border-box;
 }
 :local(.buttonSection) {
-  /* display: grid; */
-  /* text-align: center;
-  align-items: center; */
+  /* FIXME: Need to change the button position to absolute */
   display: table;
   position: relative;
   grid-template-columns: auto auto auto;
@@ -70,7 +68,7 @@
   letter-spacing: 0.16em;
   padding: 11px 44px 11px 44px;
   font-size: 13px;
-  line-height: 16px;
+  line-height: 13px;
   border-radius: 50px;
   z-index: 10;
 }
@@ -115,35 +113,23 @@
   color: white;
 }
 :local(.follow:active) {
+  /* FIXME: Border is breaking in active state */
   transition: none;
   border-color: rgb(179, 179, 179) !important;
   color: rgb(179, 179, 179);
-
   transform: scale(0.99);
 }
 :local(.followed) {
   color: rgb(0, 215, 112) !important;
 }
-
 :local(.etc) {
   margin: none;
   font-size: 35px !important;
   line-height: 0px;
   top: -15px;
+  background: transparent important!;
 }
 
 :local(.etc:hover) {
   transform: scale(1.06);
-}
-
-:local(.etcDropList) {
-  width: 100%;
-  padding: 3px 20px;
-  font-size: 15px;
-  line-height: 32px;
-  text-align: left;
-  user-select: none;
-  display: block;
-  background-color: #282828;
-  color: hsla(0, 0%, 100%, 0.6);
 }

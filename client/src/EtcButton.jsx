@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
-import style from './styles/header.css';
-import { Button, Dropdown, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import headerStyle from './styles/header.css';
+import etcBtnStyle from './styles/EtcButton.css';
 import classNames from 'classnames';
+import InlineSVG from 'svg-inline-react';
 
-const etcBtnClass = classNames('btn btn-primary', 'border-0', 'bg-transparent', 'shadow-none', style.etc);
+const etcBtnClass = classNames('btn btn-secondary', 'btn-lg', 'border-0', 'bg-transparent', 'shadow-none', headerStyle.etc);
 
 class EtcButton extends Component {
   constructor(props) {
@@ -26,55 +27,84 @@ class EtcButton extends Component {
   render() {
     return (
       <React.Fragment>
-        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-          <DropdownToggle tag="span" onClick={this.toggle} data-toggle="dropdown" aria-expanded={this.state.dropdownOpen}>
-            Custom Dropdown Content
-          </DropdownToggle>
-          <DropdownMenu className={style.etcDropList}>
-            <div onClick={this.toggle}>Custom dropdown item</div>
-            <div onClick={this.toggle}>Custom dropdown item</div>
-            <div onClick={this.toggle}>Custom dropdown item</div>
-            <div onClick={this.toggle}>Custom dropdown item</div>
-          </DropdownMenu>
-        </Dropdown>
+        <span className="dropdown">
+          <button className={etcBtnClass} type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            &#x22EF;
+          </button>
+          <ul className="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li className="dropdown-item">
+              <a href="#">Go to Artist Radio</a>
+            </li>
+            <li className="dropdown-divider" />
+            <li className="dropdown-item">
+              <a href="#" onClick={this.props.handleFollowToggle}>
+                {this.props.artist.followed ? 'Unfollow' : 'Follow'}
+              </a>
+            </li>
+            <li className="dropdown-item">
+              <a href="#">Report</a>
+            </li>
+            <li className="dropdown-divider" />
+            <li className="dropdown-submenu">
+              <a className="dropdown-item" href="#">
+                Share
+              </a>
+              <ul className="dropdown-menu">
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/facebook.svg')} className="etcDropDown facebook" />
+                    Facebook
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/messenger.svg')} className="etcDropDown messenger" />
+                    Messenger
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/twitter.svg')} className="etcDropDown twitter" />
+                    Twitter
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/telegram.svg')} className="etcDropDown telegram" />
+                    Telegram
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/skype.svg')} className="etcDropDown skype" />
+                    Skype
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/tumblr.svg')} className="etcDropDown tumblr" />
+                    Tumblr
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/baseline-link-24px.svg')} className="etcDropDown link" />
+                    Copy Artist Link
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="#">
+                    <InlineSVG src={require('svg-inline-loader!./icons/baseline-code-24px.svg')} className="etcDropDown code" />
+                    Copy Embed Code
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </span>
       </React.Fragment>
     );
   }
 }
-
-// <React.Fragment>
-//   <button type="button" className={etcBtnClass}>
-//     &#x22EF;
-//   </button>
-// </React.Fragment>
-
-// <Dropdown tag="span" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-// <DropdownToggle tag="span" onClick={this.toggle} data-toggle="dropdown" aria-expanded={this.state.dropdownOpen} className={etcBtnClass}>
-//   &#x22EF;
-// </DropdownToggle>
-// <DropdownMenu className={style.etcDropList + '' + 'bg-dark'}>
-//   <DropdownItem onClick={this.toggle}>Start Radio</DropdownItem>
-//   <DropdownItem onClick={this.toggle}>Save to Your Library</DropdownItem>
-//   <DropdownItem onClick={this.toggle}>Copy Artist Link</DropdownItem>
-// </DropdownMenu>
-// </Dropdown>
-
-ButtonDropdown.propTypes = {
-  disabled: PropTypes.bool,
-  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
-  group: PropTypes.bool,
-  isOpen: PropTypes.bool,
-  tag: PropTypes.string,
-  toggle: PropTypes.func
-};
-
-DropdownToggle.propTypes = {
-  caret: PropTypes.bool,
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  'data-toggle': PropTypes.string,
-  'aria-haspopup': PropTypes.bool
-};
 
 export default hot(module)(EtcButton);
