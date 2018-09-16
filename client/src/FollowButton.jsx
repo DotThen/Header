@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
-import style from './styles/header.css';
+import headerStyle from './styles/header.css';
 import classNames from 'classnames';
 
 const FollowBtnClass = isFollowed =>
-  classNames(style.textButton, style.follow, {
-    [style.followed]: isFollowed
+  classNames(headerStyle.textButton, headerStyle.follow, {
+    [headerStyle.followed]: isFollowed
   });
 
 class FollowButton extends Component {

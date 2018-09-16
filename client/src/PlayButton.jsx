@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
-import style from './styles/header.css';
+import headerStyle from './styles/header.css';
 import classNames from 'classnames';
 
-const PlayBtnClass = classNames(style.textButton, style.play);
+const PlayBtnClass = classNames(headerStyle.textButton, headerStyle.play);
 
 class PlayButton extends Component {
   constructor(props) {
