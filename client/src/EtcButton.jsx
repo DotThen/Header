@@ -23,13 +23,15 @@ class EtcButton extends Component {
       dropdownOpen: !this.state.dropdownOpen
     });
   }
-
+  // multi-level dropdown button
   render() {
     return (
       <React.Fragment>
+        {/* first level dropdown */}
         <span className="dropdown">
           <button className={etcBtnClass} type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             &#x22EF;
+            {/* Button shall appear as ... */}
           </button>
           <ul className="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
             <li className="dropdown-item">
@@ -38,6 +40,7 @@ class EtcButton extends Component {
             <li className="dropdown-divider" />
             <li className="dropdown-item">
               <a href="#" onClick={this.props.handleFollowToggle}>
+                {/* Conditional text ... */}
                 {this.props.artist.followed ? 'Unfollow' : 'Follow'}
               </a>
             </li>
@@ -49,6 +52,7 @@ class EtcButton extends Component {
               <a className="dropdown-item" href="#">
                 Share
               </a>
+              {/* second-level dropdown - appears upon hover. See EtcButton.css for logic. */}
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
                   <a href="#">
