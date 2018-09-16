@@ -61,8 +61,7 @@
 
 :local(.textButton) {
   display: inline;
-
-  position: absolute;
+  position: sticky;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
@@ -74,7 +73,6 @@
   line-height: 16px;
   border-radius: 50px;
   z-index: 10;
-  /* left: calc(50% - 85px); */
 }
 :local(.textButton:hover) {
   transform: scale(1.06);
@@ -94,7 +92,6 @@
 :local(.play) {
   background: rgb(0, 184, 98);
   border: rgb(0, 184, 98);
-  left: calc(50% - 235px);
 }
 
 :local(.play:hover) {
@@ -133,7 +130,6 @@
   font-size: 35px !important;
   line-height: 0px;
   top: -15px;
-  left: calc(50% + 235px);
 }
 
 :local(.etc:hover) {
