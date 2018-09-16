@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import style from './styles/header.css';
 import classNames from 'classnames';
 
-var PlayBtnClass = classNames(style.textButton, style.play);
+const PlayBtnClass = classNames(style.textButton, style.play);
 
 class PlayButton extends Component {
   constructor(props) {

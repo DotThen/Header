@@ -5,9 +5,7 @@ import style from './styles/header.css';
 import { Button, Dropdown, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import classNames from 'classnames';
 
-// var etcBtnClass = classNames('btn btn-primary', 'border-0', 'bg-transparent', 'shadow-none', 'font-size-35px', style.etc);
-
-var etcBtnClass = classNames('btn btn-primary', 'border-0', 'bg-transparent', 'shadow-none', style.etc);
+const etcBtnClass = classNames('btn btn-primary', 'border-0', 'bg-transparent', 'shadow-none', style.etc);
 
 class EtcButton extends Component {
   constructor(props) {

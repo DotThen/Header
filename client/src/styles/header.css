@@ -44,18 +44,25 @@
   box-sizing: border-box;
 }
 :local(.buttonSection) {
-  display: block;
+  /* display: grid; */
+  /* text-align: center;
+  align-items: center; */
+  display: table;
+  position: relative;
+  grid-template-columns: auto auto auto;
   text-align: center;
   box-sizing: border-box;
   position: relative;
+  float: center;
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  display: block;
 }
 
 :local(.textButton) {
   display: inline;
-  position: relative;
+
+  position: absolute;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
@@ -67,6 +74,7 @@
   line-height: 16px;
   border-radius: 50px;
   z-index: 10;
+  /* left: calc(50% - 85px); */
 }
 :local(.textButton:hover) {
   transform: scale(1.06);
@@ -86,6 +94,7 @@
 :local(.play) {
   background: rgb(0, 184, 98);
   border: rgb(0, 184, 98);
+  left: calc(50% - 235px);
 }
 
 :local(.play:hover) {
@@ -100,7 +109,7 @@
 :local(.follow) {
   border-color: rgb(179, 179, 179);
   color: rgb(179, 179, 179);
-  background: hsla(0, 0%, 22%, 0.6) !important;
+  background: hsla(0, 0%, 22%, 0.6);
   line-height: 15px;
   border-width: 1.5px;
 }
@@ -124,6 +133,7 @@
   font-size: 35px !important;
   line-height: 0px;
   top: -15px;
+  left: calc(50% + 235px);
 }
 
 :local(.etc:hover) {

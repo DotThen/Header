@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import style from './styles/header.css';
 import classNames from 'classnames';
 
-var FollowBtnClass = isFollowed =>
+const FollowBtnClass = isFollowed =>
   classNames(style.textButton, style.follow, {
     [style.followed]: isFollowed
   });
