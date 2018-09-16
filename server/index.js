@@ -1,16 +1,16 @@
-var path = require('path');
-var express = require('express');
+const path = require('path');
+const express = require('express');
 
 require('console-stamp')(console, 'HH:MM:ss.l');
 
-var app = express();
+const app = express();
 app.use(require('morgan')('short'));
 
 // *************webpack-hot-middleware set-up*******************
 // Step 1: Create & configure a webpack compiler
-var webpack = require('webpack');
-var webpackConfig = require('../webpack.config');
-var compiler = webpack(webpackConfig);
+const webpack = require('webpack');
+const webpackConfig = require('../webpack.config');
+const compiler = webpack(webpackConfig);
 
 // Step 2: Attach the dev middleware to the compiler & the app
 app.use(

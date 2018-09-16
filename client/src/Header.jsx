@@ -12,7 +12,7 @@ import EtcButton from './EtcButton.jsx';
 
 console.log('BOOTSTRAP BUTTON', Button);
 
-var txtBtnClass = (str, isFollowed) =>
+const txtBtnClass = (str, isFollowed) =>
   classNames(style.textButton, {
     [style.play]: str === 'PLAY',
     [style.follow]: str === 'FOLLOW',

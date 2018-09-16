@@ -25,7 +25,7 @@ class FollowButton extends Component {
   }
 
   render() {
-    var BtnTXT = this.props.artist.followed ? (this.state.hover ? 'UNFOLLOW' : 'FOLLOWING') : 'FOLLOW';
+    const BtnTXT = this.props.artist.followed ? (this.state.hover ? 'UNFOLLOW' : 'FOLLOWING') : 'FOLLOW';
     return (
       <button className={FollowBtnClass(this.props.artist.followed)} onClick={this.props.handleFollowToggle} onMouseEnter={this.hoverToggle} onMouseLeave={this.hoverToggle}>
         {BtnTXT}

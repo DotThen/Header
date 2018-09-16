@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   render() {
-    var toRender = !!this.state.artistDisp ? <Header artist={this.state.artistDisp} handleFollowToggle={this.handleFollowToggle} /> : <div className="placeHolder" />;
+    const toRender = !!this.state.artistDisp ? <Header artist={this.state.artistDisp} handleFollowToggle={this.handleFollowToggle} /> : <div className="placeHolder" />;
     return <React.Fragment>{toRender}</React.Fragment>;
   }
 }

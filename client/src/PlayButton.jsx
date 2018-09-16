@@ -22,7 +22,7 @@ class PlayButton extends Component {
   }
 
   render() {
-    var PlayBtnTXT = !this.state.playing ? 'PAUSE' : 'PLAY';
+    const PlayBtnTXT = !this.state.playing ? 'PAUSE' : 'PLAY';
     return (
       <button className={PlayBtnClass} onClick={this.playToggle}>
         {PlayBtnTXT}
