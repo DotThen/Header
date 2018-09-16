@@ -6,7 +6,9 @@ for (let i = 1; i <= 100; i++) {
   let newArtist = {
     artistID: i,
     artistName: faker.name.findName(),
+    followed: Math.round(Math.random()) ? true : false,
     followersNumber: 'PLACE_HOLDER',
+    verified: Math.round(Math.random() * 0.7 + 0.3) ? true : false,
     artistImages: [
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',

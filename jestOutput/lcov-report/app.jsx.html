@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for client/src/Header.jsx</title>
+    <title>Code coverage report for app.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">client/src</a> Header.jsx
+      <a href="index.html">All files</a> app.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/18</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/19</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
-        <span class="quiet">Functions</span>
+        <span class="quiet">Branches</span>
         <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/16</span>
+        <span class='fraction'>0/19</span>
       </div>
     </div>
   </div>
@@ -89,12 +89,12 @@
 44
 45
 46
-47</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+47
+48
+49
+50
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -102,16 +102,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,10 +115,26 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,60 +147,65 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { Component } from 'react';</span>
 <span class="cstat-no" title="statement not covered" >import PropTypes from 'prop-types';</span>
+<span class="cstat-no" title="statement not covered" >import ReactDOM from 'react-dom';</span>
 <span class="cstat-no" title="statement not covered" >import { hot } from 'react-hot-loader';</span>
-<span class="cstat-no" title="statement not covered" >import style from './styles/header.css';</span>
-<span class="cstat-no" title="statement not covered" >import { Button } from 'reactstrap';</span>
-<span class="cstat-no" title="statement not covered" >import { ListGroup } from 'react-bootstrap/lib/ListGroup';</span>
-<span class="cstat-no" title="statement not covered" >import { ListGroupItem } from 'react-bootstrap/lib/ListGroupItem';</span>
-<span class="cstat-no" title="statement not covered" >import classNames from 'classnames';</span>
-<span class="cstat-no" title="statement not covered" >import PlayButton from './PlayButton.jsx';</span>
-<span class="cstat-no" title="statement not covered" >import FollowButton from './FollowButton.jsx';</span>
-<span class="cstat-no" title="statement not covered" >import EtcButton from './EtcButton.jsx';</span>
+<span class="cstat-no" title="statement not covered" >import axios from 'axios';</span>
+<span class="cstat-no" title="statement not covered" >import Header from './Header.jsx';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >console.log('BOOTSTRAP BUTTON', Button);</span>
-&nbsp;
-var <span class="fstat-no" title="function not covered" >txtBtnClass = <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >(</span>str, isFollowed) =&gt;</span></span>
-  classNames(style.textButton, {
-    [style.play]: str === 'PLAY',
-    [style.follow]: str === 'FOLLOW',
-    [style.etc]: str === 'ETC'
-  });
-&nbsp;
-const <span class="fstat-no" title="function not covered" >Header = <span class="cstat-no" title="statement not covered" >(</span>{ artist, handleFollowToggle }) =&gt; <span class="cstat-no" title="statement not covered" >{</span></span>
-  // background styling has to be done in-line.
-  const blackBG = <span class="cstat-no" title="statement not covered" >{</span>
-    //linear-gradient(transparent, black),
-    background: `linear-gradient(transparent -30%, rgb(24,24,24)), url(${artist.artistImages[0]}) no-repeat top`,
-    backgroundSize: 'cover'
-  };
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;div style={blackBG} className={style.artistPortraitBG}&gt;
-      &lt;div className={style.scrollSectionContainer}&gt;
-        &lt;div className={style.monthlyListeners}&gt;{artist.followersNumber.toLocaleString('en')} Followers&lt;/div&gt;
-        &lt;h1 className={style.artistName}&gt;{artist.artistName}&lt;/h1&gt;
-        &lt;div className={style.buttonSection}&gt;
-          &lt;PlayButton /&gt;
-          &lt;FollowButton artist={artist} handleFollowToggle={handleFollowToggle} /&gt;
-          &lt;EtcButton /&gt;
-        &lt;/div&gt;
-        &lt;div&gt;{artist.about.Biography}&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  );
+const <span class="fstat-no" title="function not covered" >getArtistInfo = <span class="cstat-no" title="statement not covered" >c</span>allback =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  axios</span>
+    .get(`/artists/${Math.floor(Math.random() * 99 + 1)}`)
+    .then(<span class="fstat-no" title="function not covered" >response =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(response.data);</span>
+<span class="cstat-no" title="statement not covered" >      callback(response.data[0]);</span>
+    })
+    .catch(<span class="fstat-no" title="function not covered" >error =&gt; {</span>
+      // console.error(error);
+    });
 };
+const blackBG = <span class="cstat-no" title="statement not covered" >{ backgroundColor: '#191414' };</span>
 &nbsp;
-export default hot(module)(Header);
+class App extends Component {
+  constructor() <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    super();</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      artistDisp: null
+    };
+  }
+  // componentWillMount() {
+  //   getArtistInfo(responseData =&gt; {
+  //     this.setState({ artistDisp: responseData });
+  //   });
+  // }
+  componentDidMount() <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    getArtistInfo(<span class="fstat-no" title="function not covered" >responseData =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ artistDisp: responseData });</span>
+    });
+  }
+&nbsp;
+  render() {
+    var toRender = <span class="cstat-no" title="statement not covered" >!!this.state.artistDisp ? &lt;Header artist={this.state.artistDisp} /&gt; : &lt;div className="placeHolder" /&gt;;</span>
+<span class="cstat-no" title="statement not covered" >    return &lt;React.Fragment&gt;{toRender}&lt;/React.Fragment&gt;;</span>
+&nbsp;
+    // return (
+    //   &lt;div className="header_container"&gt;
+    //     &lt;Header artist={this.state.artistDisp} /&gt;
+    //   &lt;/div&gt;
+    // );
+  }
+}
+&nbsp;
+export default hot(module)(App);
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 15 2018 17:58:59 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Sep 13 2018 20:42:57 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
-<script src="../../prettify.js"></script>
+<script src="prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -198,6 +213,6 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../sorter.js"></script>
+<script src="sorter.js"></script>
 </body>
 </html>

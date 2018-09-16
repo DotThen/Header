@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/10</span>
       </div>
     </div>
   </div>
@@ -80,7 +80,8 @@
 35
 36
 37
-38</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+38
+39</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,11 +111,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const faker = <span class="cstat-no" title="statement not covered" >require('faker');</span>
@@ -125,7 +127,9 @@ let HeaderDB = <span class="cstat-no" title="statement not covered" >require('./
   let newArtist = <span class="cstat-no" title="statement not covered" >{</span>
     artistID: i,
     artistName: faker.name.findName(),
-    followersNumber: Math.floor(Math.random() * 10000000),
+    followed: Math.round(Math.random()) ? true : false,
+    followersNumber: 'PLACE_HOLDER',
+    verified: Math.round(Math.random() * 0.7 + 0.3) ? true : false,
     artistImages: [
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',
@@ -138,21 +142,20 @@ let HeaderDB = <span class="cstat-no" title="statement not covered" >require('./
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all',
       'https://loremflickr.com/320/240/musician,hollywood,artist,singer/all'
-    ],
+    ].slice(0, Math.floor(Math.random() * 9 + 2)),
     about: {
       Biography: faker.lorem.paragraphs(),
-      Where: {
-        [faker.address.city()]: Math.floor(Math.random() * 1000000),
-        [faker.address.city()]: Math.floor(Math.random() * 1000000),
-        [faker.address.city()]: Math.floor(Math.random() * 1000000),
-        [faker.address.city()]: Math.floor(Math.random() * 1000000),
-        [faker.address.city()]: Math.floor(Math.random() * 1000000)
-      }
+      Where: {}
     }
   };
-  // HeaderDB.create(newArtist, function(err, newData) {
-  //   err ? console.error(error) : console.log(newData);
-  // });
+  // adding cities
+<span class="cstat-no" title="statement not covered" >  for (let i = 0; i &lt; faker.random.number({ min: 80, max: 200 }); i++) {</span>
+<span class="cstat-no" title="statement not covered" >    newArtist.about.Where[faker.address.city()] = faker.random.number({ min: 1000, max: 100000 });</span>
+  }
+<span class="cstat-no" title="statement not covered" >  newArtist.followersNumber = Object.values(newArtist.about.Where).reduce(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>accumulator, currentValue) =&gt; accumulator + currentValue);</span></span>
+<span class="cstat-no" title="statement not covered" >  HeaderDB.create(newArtist, <span class="fstat-no" title="function not covered" >function(</span>err, newData) {</span>
+<span class="cstat-no" title="statement not covered" >    err ? console.error(error) : console.log(newData);</span>
+  });
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -160,7 +163,7 @@ let HeaderDB = <span class="cstat-no" title="statement not covered" >require('./
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Sep 13 2018 10:17:10 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 15 2018 17:58:59 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

@@ -6,7 +6,7 @@ require('console-stamp')(console, 'HH:MM:ss.l');
 var app = express();
 app.use(require('morgan')('short'));
 
-// ************************************
+// *************webpack-hot-middleware set-up*******************
 // Step 1: Create & configure a webpack compiler
 var webpack = require('webpack');
 var webpackConfig = require('../webpack.config');
@@ -28,7 +28,7 @@ app.use(
     heartbeat: 10 * 1000
   })
 );
-
+// SOURCE: https://github.com/webpack-contrib/webpack-hot-middleware/tree/master/example
 // ************************************
 const bodyParser = require('body-parser');
 const HeaderDB = require('../database/index.js');
