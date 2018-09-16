@@ -8,11 +8,12 @@ module.exports = {
   context: __dirname,
   entry: [
     // Add the client which connects to our middleware
-    // You can use full urls like 'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr'
+    // You can use full urls like 'webpack-hot-middleware/client?path=http://localhost:3004/__webpack_hmr'
     // useful if you run your app from another point like django
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
     // And then the actual application
     './client/src/index.jsx'
+    // SOURCE: https://github.com/webpack-contrib/webpack-hot-middleware/tree/master/example
   ],
   output: {
     path: DIST_DIR,
@@ -46,6 +47,29 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader' // inject CSS to page
+          },
+          {
+            loader: 'css-loader' // translates CSS into CommonJS modules
+          },
+          {
+            loader: 'postcss-loader', // Run post css actions
+            options: {
+              plugins: function() {
+                // post css plugins, can be exported to postcss.config.js
+                return [require('precss'), require('autoprefixer')];
+              }
+            }
+          },
+          {
+            loader: 'sass-loader' // compiles Sass to CSS
+          }
+        ]
       }
     ]
   }

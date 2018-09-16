@@ -14,6 +14,7 @@ var headerDBSchema = new mongoose.Schema({
     type: Number,
     unique: true
   },
+  followed: Boolean,
   artistName: String,
   followersNumber: Number,
   artistImages: [String],

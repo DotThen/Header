@@ -1,3 +1,6 @@
+## git rm -r --cached jestOutput ##
+jestOutput/
+
 ## MAC files ##
 .DS_Store
 
@@ -23,3 +26,5 @@ coverage
 # Compiled Dirs (http://nodejs.org/api/addons.html)
 build/
 dist/
+
+
