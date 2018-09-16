@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
 import headerStyle from './styles/header.css';
 import etcBtnStyle from './styles/EtcButton.css';
+// etcBtnStyle not called but still applying style via :global
 import classNames from 'classnames';
 import InlineSVG from 'svg-inline-react';
 
