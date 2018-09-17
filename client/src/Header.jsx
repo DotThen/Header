@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
 import headerStyle from './styles/header.css';
-import navBarStyle from './styles/navBar.css';
+import NavBarStyle from './styles/NavBar.css';
 import PlayButton from './PlayButton.jsx';
 import FollowButton from './FollowButton.jsx';
 import EtcButton from './EtcButton.jsx';
@@ -19,10 +19,10 @@ const Header = ({ artist, handleFollowToggle }) => {
 
   return (
     <React.Fragment>
+      <NavBar />
       <div style={blackBG} className={headerStyle.artistPortraitBG}>
-        <NavBar />
         <div className={headerStyle.scrollSectionContainer}>
-          <div className={headerStyle.monthlyListeners}>{artist.followersNumber.toLocaleString('en')} Followers</div>
+          <span className={headerStyle.monthlyListeners}>{artist.followersNumber.toLocaleString('en')} Followers</span>
           <h1 className={headerStyle.artistName}>{artist.artistName}</h1>
           <div className={headerStyle.buttonSection}>
             <PlayButton />

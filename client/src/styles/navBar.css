@@ -1,7 +1,8 @@
 :global(.nav-bar-container) {
   width: 220px;
+  height: 100%;
   top: 0px;
-  position: fixed;
+  position: absolute;
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -9,6 +10,7 @@
   box-sizing: border-box;
   border: none;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 :global(nav.navBar) {
@@ -19,4 +21,24 @@
   letter-spacing: 0.21px;
   font-weight: 200px;
   display: flex;
+}
+
+:global(.logo) {
+  fill: white;
+  width: 25px;
+}
+
+:global(.logo:hover) {
+  fill: #1ed760;
+}
+
+:global(.icon > svg) {
+  width: 30px;
+}
+
+:global(.navBar-group) {
+  background-color: transparent !important;
+}
+:global(ul) {
+  background-color: transparent !important;
 }
