@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import headerStyle from './styles/header.css';
 import classNames from 'classnames';
 
-class About extends Component {
+class NavBar extends Component {
   constructor(props) {
     super(props);
   }
@@ -19,4 +19,4 @@ class About extends Component {
   }
 }
 
-export default hot(module)(About);
+export default hot(module)(NavBar);
