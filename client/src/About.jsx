@@ -12,13 +12,18 @@ class About extends Component {
   }
   render() {
     console.log('COMPONENT: ABOUT:', this.props);
+
     return (
       <div className="about-container">
         <div className="about-container-left">
           <ArtistPics artistImages={this.props.artist.artistImages} />
           <div className="biography">
-            <h2 className="biography">Biography</h2>
-            {this.props.artist.about.Biography}
+            <h2 className="biography">Bio</h2>
+            {this.props.artist.about.Biography.split('\n').map(paragraph => (
+              <React.Fragment>
+                <p>{paragraph}</p>
+              </React.Fragment>
+            ))}
           </div>
         </div>
         <div className="about-container-right">
