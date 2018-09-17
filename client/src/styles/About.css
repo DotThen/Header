@@ -1,0 +1,40 @@
+:global(.about-container) {
+  width: calc(100% - 220px);
+  float: right;
+  margin: 0;
+  padding: 25px;
+  color: rgb(251, 251, 251);
+}
+
+:global(.about-container-left) {
+  width: calc(100% - 320px);
+  float: left;
+  margin: 0;
+  padding: 25px;
+}
+
+:global(.about-container-right) {
+  width: 320px;
+  float: right;
+  margin: 0;
+  padding: 25px;
+}
+
+:global(.locationStat-heading) {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+:global(.locationStat-entry) {
+  padding: 7.5px;
+}
+
+:global(.locationStat-location) {
+  font-size: 14px;
+  font-weight: 400;
+}
+:global(.locationStat-followerCount) {
+  font-size: 14px;
+  color: rgb(179, 179, 179);
+  font-weight: 200;
+}

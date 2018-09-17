@@ -39,6 +39,6 @@
 :global(.navBar-group) {
   background-color: transparent !important;
 }
-:global(ul) {
+:global(.navBar-expand > ul) {
   background-color: transparent !important;
 }
