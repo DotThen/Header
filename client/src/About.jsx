@@ -17,7 +17,7 @@ class About extends Component {
       <div className="about-container">
         <div className="about-container-left">
           <ArtistPics artistImages={this.props.artist.artistImages} />
-          <div className="biography">
+          <div className="biography-container">
             <h2 className="biography">Bio</h2>
             {this.props.artist.about.Biography.split('\n').map(paragraph => (
               <React.Fragment>
