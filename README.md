@@ -1,8 +1,10 @@
 # Spotify Clone
 
 > Spotify as microservices
-> Team
-|        Member        |Section                    |Repo                         |
+
+# Team
+
+|        Member    |Section                    |Repo                         |
 |----------------|-------------------------------|-----------------------------|
 |[davydhong](https://github.com/davydhong)|Header            |https://github.com/DotThen/Header           |
 |[wissemgamra](https://github.com/wissemgamra) | Albums and Player | https://github.com/DotThen/AlbumListMusicPlayer |
