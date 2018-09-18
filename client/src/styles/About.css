@@ -20,7 +20,9 @@
   margin: 0;
   padding: 25px;
 }
-
+:global(.carousel) {
+  z-index: -10;
+}
 :global(.locationStat-header) {
   font-size: 18px;
   font-weight: 600;

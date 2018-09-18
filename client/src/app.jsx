@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
 import axios from 'axios';
 import Header from './Header.jsx';
