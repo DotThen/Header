@@ -5,7 +5,8 @@ import headerStyle from './styles/header.css';
 import etcBtnStyle from './styles/EtcButton.css';
 // etcBtnStyle not called but still applying style via :global
 import classNames from 'classnames';
-import InlineSVG from 'svg-inline-react';
+
+import facebookIcon from './icons/facebook.svg';
 
 const etcBtnClass = classNames('btn btn-secondary', 'btn-lg', 'border-0', 'bg-transparent', 'shadow-none', headerStyle.etc);
 
@@ -38,10 +39,11 @@ class EtcButton extends Component {
             <li className="dropdown-item">
               <a href="#">Go to Artist Radio</a>
             </li>
+
             <li className="dropdown-divider" />
             <li className="dropdown-item">
               <a href="#" onClick={this.props.handleFollowToggle}>
-                {/* Conditional text ... */}
+                {/* State-dependent text ... */}
                 {this.props.artist.followed ? 'Unfollow' : 'Follow'}
               </a>
             </li>
@@ -57,49 +59,89 @@ class EtcButton extends Component {
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/facebook.svg')} className="etcDropDown facebook" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/facebook.svg').toString()
+                      }}
+                      className="etcDropDown facebook"
+                    />
                     Facebook
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/messenger.svg')} className="etcDropDown messenger" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/messenger.svg').toString()
+                      }}
+                      className="etcDropDown messenger"
+                    />
                     Messenger
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/twitter.svg')} className="etcDropDown twitter" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/twitter.svg').toString()
+                      }}
+                      className="etcDropDown twitter"
+                    />
                     Twitter
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/telegram.svg')} className="etcDropDown telegram" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/telegram.svg').toString()
+                      }}
+                      className="etcDropDown telegram"
+                    />
                     Telegram
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/skype.svg')} className="etcDropDown skype" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/skype.svg').toString()
+                      }}
+                      className="etcDropDown skype"
+                    />
                     Skype
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/tumblr.svg')} className="etcDropDown tumblr" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/tumblr.svg').toString()
+                      }}
+                      className="etcDropDown tumblr"
+                    />
                     Tumblr
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/baseline-link-24px.svg')} className="etcDropDown link" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/baseline-link.svg').toString()
+                      }}
+                      className="etcDropDown link"
+                    />
                     Copy Artist Link
                   </a>
                 </li>
                 <li className="dropdown-item">
                   <a href="#">
-                    <InlineSVG src={require('svg-inline-loader!./icons/baseline-code-24px.svg')} className="etcDropDown code" />
+                    <i
+                      dangerouslySetInnerHTML={{
+                        __html: require('./icons/baseline-code.svg').toString()
+                      }}
+                      className="etcDropDown code"
+                    />
                     Copy Embed Code
                   </a>
                 </li>
