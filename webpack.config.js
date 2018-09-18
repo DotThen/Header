@@ -4,7 +4,7 @@ const DIST_DIR = path.join(__dirname, '/public/dist');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.WEBPACK_MODE || 'development',
   context: __dirname,
   entry: [
     // Add the client which connects to our middleware

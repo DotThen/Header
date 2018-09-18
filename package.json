@@ -6,9 +6,11 @@
   "author": "david_hong",
   "license": "UNLICENSED",
   "scripts": {
+    "seed": "node database/seeder.js",
+    "bundle": "WEBPACK_MODE='production' webpack",
+    "start": "nodemon server/index.js",
     "dev": "node server/index.js",
-    "test": "jest --watch",
-    "seed": "node database/seeder.js"
+    "test": "jest --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",

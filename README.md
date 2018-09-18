@@ -44,7 +44,18 @@ npm install
 ### Running the Program
 
 ```sh
-npm run seed
-npm run dev
-npm run test
+  npm run seed
+  npm run dev
+  npm run test
 ```
+
+### Making bundle.js
+
+```sh
+  npm run bundle
+  npm start
+```
+
+
+
+

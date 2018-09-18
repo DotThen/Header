@@ -33,7 +33,7 @@ app.use(
 const bodyParser = require('body-parser');
 const HeaderDB = require('../database/index.js');
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../public/dist'));
+app.use(express.static(__dirname + '/../public'));
 
 // Upon GET request to '/artist/:artistID', queries the HeaderDB (mongoDB) and sends back artistObj.
 app.get('/artists/:artistID', (req, res) => {
