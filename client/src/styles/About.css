@@ -1,0 +1,62 @@
+:global(.about-container) {
+  width: calc(100% - 220px);
+  display: grid;
+  grid-template: 1fr 320px /;
+  float: right;
+  margin: 0;
+  padding: 25px;
+  color: rgb(251, 251, 251);
+}
+
+:global(.about-container-left) {
+  grid-column-start: 1;
+  margin: 0;
+  padding: 25px;
+}
+
+:global(.about-container-right) {
+  grid-column-start: 2;
+  min-width: 250px;
+  margin: 0;
+  padding: 25px;
+}
+:global(.carousel) {
+  z-index: -10;
+}
+:global(.locationStat-header) {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+:global(.locationStat-entry) {
+  padding: 7.5px;
+}
+
+:global(.locationStat-location) {
+  font-size: 14px;
+  font-weight: 400;
+}
+:global(.locationStat-followerCount) {
+  font-size: 14px;
+  color: rgb(179, 179, 179);
+  font-weight: 200;
+}
+
+:global(.artistPics-header) {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+:global(.biography-header) {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+:global(.biography-container) {
+  margin-top: 25px;
+}
+
+:global(.biography-txt) {
+  font-weight: 100px;
+  color: rgb(179, 179, 179);
+}

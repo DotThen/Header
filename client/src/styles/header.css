@@ -13,6 +13,8 @@
 
 :local(.scrollSectionContainer) {
   filter: grayscale(0%);
+  width: calc(100% - 220px);
+  float: right;
 }
 
 :local(.monthlyListeners) {
@@ -70,7 +72,6 @@
   font-size: 13px;
   line-height: 13px;
   border-radius: 50px;
-  z-index: 10;
 }
 :local(.textButton:hover) {
   transform: scale(1.06);
