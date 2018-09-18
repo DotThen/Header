@@ -8,7 +8,7 @@
 |----------------|-------------------------------|-----------------------------|
 |[davydhong](https://github.com/davydhong)|Header            |https://github.com/DotThen/Header           |
 |[wissemgamra](https://github.com/wissemgamra) | Albums and Player | https://github.com/DotThen/AlbumListMusicPlayer |
-|[Mac087](https://github.com/Mac087) | Popular Artists | https://github.com/DotThen/PopularSongs |
+|[Mac087](https://github.com/Mac087) | Popular Songs | https://github.com/DotThen/PopularSongs |
 |[shabbyjoon](https://github.com/shabbyjoon) | Related Artists | https://github.com/DotThen/RelatedArtists |
 
 
