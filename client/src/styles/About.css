@@ -60,3 +60,16 @@
   font-weight: 100px;
   color: rgb(179, 179, 179);
 }
+
+:global(.artistPics-container) {
+  z-index: -10;
+}
+
+:global(#carouselIndicators) {
+  user-select: none;
+}
+
+/* FIXME: Carousel controls not working z-index issue */
+:global(a.carousel-control-prev, a.carousel-control-next, ol.carousel-indicators) {
+  z-index: 0 !important;
+}

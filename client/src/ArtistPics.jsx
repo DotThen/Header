@@ -25,7 +25,6 @@ class ArtistPics extends Component {
             {/* Indicator Counter is Dynamic */}
             {this.props.artistImages.map((imgURL, idx) => carouselIndicatorRender(imgURL, idx))}
           </ol>
-
           <div className="carousel-inner">
             {/* IMAGES RENDER HERE */}
             {this.props.artistImages.map((imgURL, idx) => imageRender(imgURL, idx))}
