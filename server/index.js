@@ -1,11 +1,11 @@
 const path = require('path');
 const express = require('express');
-
+const cors = require('cors');
 require('console-stamp')(console, 'HH:MM:ss.l');
 
 const app = express();
 app.use(require('morgan')('short'));
-
+app.use(cors());
 // *************webpack-hot-middleware set-up*******************
 // Step 1: Create & configure a webpack compiler
 const webpack = require('webpack');
