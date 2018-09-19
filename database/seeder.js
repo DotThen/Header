@@ -23,7 +23,7 @@ for (let i = 1; i <= 100; i++) {
 
   // adding pictures;
   for (let i = 1; i <= faker.random.number({ min: 2, max: 10 }); i++) {
-    newArtist.artistImages.push(`https://loremflickr.com/320/240/musician,hollywood,artist,singer/all?random=${i}`);
+    newArtist.artistImages.push(`https://loremflickr.com/1200/900/musician,hollywood,artist,singer/all?random=${i}`);
   }
 
   newArtist.followersNumber = Object.values(newArtist.about.Where).reduce((accumulator, currentValue) => accumulator + currentValue);

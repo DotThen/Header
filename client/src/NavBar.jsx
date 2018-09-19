@@ -24,61 +24,38 @@ class NavBar extends Component {
                   className="logo"
                 />
               </div>
-              <ul>
-                <li>
-                  <div className="navBar-item icon-left">
-                    <span className="navbar-link__text">Search</span>
-                    <i
-                      dangerouslySetInnerHTML={{
-                        __html: require('./icons/search-icon.svg').toString()
-                      }}
-                      className="icon search-icon"
-                    />
-                    <i
-                      dangerouslySetInnerHTML={{
-                        __html: require('./icons/search-active-icon.svg').toString()
-                      }}
-                      className="icon search-active-icon"
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div className="navBar-item icon-left">
-                    <span className="navbar-link__text">Home</span>
-                    <i
-                      dangerouslySetInnerHTML={{
-                        __html: require('./icons/home-icon.svg').toString()
-                      }}
-                      className="icon home-icon"
-                    />
-                    <i
-                      dangerouslySetInnerHTML={{
-                        __html: require('./icons/home-active-icon.svg').toString()
-                      }}
-                      className="icon home-active-icon"
-                    />
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <div className="navBar-item icon-left">
-                      <span className="navbar-link__text">Your Library</span>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: require('./icons/collection-icon.svg').toString()
-                        }}
-                        className="icon collection-icon"
-                      />
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: require('./icons/collection-active-icon.svg').toString()
-                        }}
-                        className="icon collection-active-icon"
-                      />
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <br/><br/>
+              <div className="navBar-item">
+                <i
+                  dangerouslySetInnerHTML={{
+                    __html: require('./icons/search-icon.svg').toString()
+                  }}
+                  className="icon search-icon"
+                />
+                <span className="navbar-link__text">  Search</span>
+              </div>
+              <br/>
+              <div className="navBar-item">
+                <i
+                  dangerouslySetInnerHTML={{
+                    __html: require('./icons/home-icon.svg').toString()
+                  }}
+                  className="icon home-icon"
+                />
+                <span className="navbar-link__text">  Home</span>
+              </div>
+              <br/>
+              <div>
+                <div className="navBar-item">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: require('./icons/collection-icon.svg').toString()
+                    }}
+                    className="icon collection-icon"
+                  />
+                  <span className="navbar-link__text">  Your Library</span>
+                </div>
+              </div>
             </div>
           </nav>
         </div>

@@ -39,6 +39,11 @@
 :global(.navBar-group) {
   background-color: transparent !important;
 }
+
 :global(.navBar-expand > ul) {
   background-color: transparent !important;
+}
+
+:global(.navBar-item:hover) {
+  color: white;
 }
