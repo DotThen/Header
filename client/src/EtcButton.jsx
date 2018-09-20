@@ -5,8 +5,9 @@ import headerStyle from './styles/header.css';
 import etcBtnStyle from './styles/EtcButton.css';
 // etcBtnStyle not called but still applying style via :global
 import classNames from 'classnames';
-
-import facebookIcon from './icons/facebook.svg';
+import Dropdown from 'rc-dropdown';
+import Menu, { Item as MenuItem, Divider } from 'rc-menu';
+import 'rc-dropdown/assets/index.less';
 
 const etcBtnClass = classNames('btn btn-secondary', 'btn-lg', 'border-0', 'bg-transparent', 'shadow-none', headerStyle.etc);
 
