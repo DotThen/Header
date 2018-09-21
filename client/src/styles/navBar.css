@@ -22,18 +22,24 @@
   font-weight: 200px;
   display: flex;
 }
+:global(.navBar-expand) {
+  width: 100%;
+}
 
 :global(.logo) {
   fill: white;
   width: 25px;
+  transition: 0.5s ease;
 }
 
 :global(.logo:hover) {
-  fill: #1ed760;
+  fill: rgb(0,214,112);
+  transition: 0.5s ease;
 }
 
 :global(.icon > svg) {
-  width: 30px;
+  width: 40px;
+  margin-right: 10px;
 }
 
 :global(.navBar-group) {
@@ -44,6 +50,22 @@
   background-color: transparent !important;
 }
 
+:global(.navBar-item) {
+  transition: color 0.5s ease;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 :global(.navBar-item:hover) {
   color: white;
+}
+
+:global(.navBar-item.active) {
+  color: rgb(0, 180, 96);
+  transition: color 0.5s ease;
+}
+
+:global(.navBar-item:active) {
+  color: white;
+  transition: color 0.7s ease;
 }

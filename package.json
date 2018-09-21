@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "seed": "node database/seeder.js",
-    "bundle": "webpack -d -w --webpack.config.js",
+    "bundle": "webpack -d -w",
     "start": "nodemon server/index.js",
     "dev": "node server/index.js",
     "test": "jest --watch",

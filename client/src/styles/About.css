@@ -6,6 +6,8 @@
   margin: 0;
   padding: 25px;
   color: rgb(251, 251, 251);
+  max-height: 2000px;
+  height: auto;
 }
 
 :global(.about-container-left) {
@@ -53,6 +55,7 @@
 }
 
 :global(.biography-container) {
+  height: 100%;
 }
 
 :global(.biography-txt) {
@@ -69,7 +72,19 @@
   user-select: none;
 }
 
-/* FIXME: Carousel controls not working z-index issue */
-:global(a.carousel-control-prev, a.carousel-control-next, ol.carousel-indicators) {
-  /* z-index: 0 !important; */
+:global(.button.biography-toggle-collapse) {
+  margin-top: 10px !important;
+}
+
+:global(.biography-txt-container.collapsed) {
+  max-height: calc(21.6px * 8);
+  transition: max-height 1s ease;
+  overflow: hidden;
+}
+
+:global(.biography-txt-container.expanded) {
+  max-height: 2000px;
+  height: auto;
+  transition: max-height 1s ease;
+  overflow: hidden;
 }

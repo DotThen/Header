@@ -72,11 +72,12 @@
   font-size: 13px;
   line-height: 13px;
   border-radius: 50px;
+  transition: scale 33ms cubic-bezier(0.3, 0, 0, 1);
 }
 :local(.textButton:hover) {
   transform: scale(1.06);
   transition-property: all;
-  transition: none 33ms cubic-bezier(0.3, 0, 0, 1);
+  transition: scale 33ms cubic-bezier(0.3, 0, 0, 1);
 }
 
 :local(.textButton:focus) {
