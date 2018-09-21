@@ -21,10 +21,15 @@ for (let i = 1; i <= 100; i++) {
     newArtist.about.Where[faker.address.city()] = faker.random.number({ min: 1000, max: 100000 });
   }
 
-  // adding pictures;
+  // adding urls to s3;
+
+  var obj = {};
   for (let i = 1; i <= faker.random.number({ min: 2, max: 10 }); i++) {
-    newArtist.artistImages.push(`https://loremflickr.com/1200/900/musician,hollywood,artist,singer/all?random=${i}`);
+    obj[faker.random.number({ min: 1, max: 27 })] = faker.random.number({ min: 1, max: 27 });
   }
+  Object.values(obj).forEach(num => {
+    newArtist.artistImages.push(`https://s3-us-west-1.amazonaws.com/spotifycloneartists/photos/${num}.jpg`);
+  });
 
   newArtist.followersNumber = Object.values(newArtist.about.Where).reduce((accumulator, currentValue) => accumulator + currentValue);
   HeaderDB.create(newArtist, function(err, newData) {
