@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/spotify');
+mongoose.connect('mongodb://david:password1234@ds111113.mlab.com:11113/spotify-header');
 
 const db = mongoose.connection;
 db.on('error', error => {
