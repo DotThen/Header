@@ -52,7 +52,7 @@ npm install
 ### Making bundle.js
 
 ```sh
-  npm run bundle
+  npm run 
   npm start
 ```
 

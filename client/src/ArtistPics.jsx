@@ -9,7 +9,7 @@ class ArtistPics extends Component {
     super(props);
   }
   render() {
-    console.log('COMPONENT: ArtistPics:', this.props.artistImages);
+    // console.log('COMPONENT: ArtistPics:', this.props.artistImages);
     const imageRender = (url, idx) => (
       <div className={idx === 0 ? 'carousel-item active' : 'carousel-item'}>
         <img className="d-block w-100" src={url} alt="First slide" />

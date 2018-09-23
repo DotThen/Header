@@ -23,7 +23,7 @@ class About extends Component {
     }));
   }
   render() {
-    console.log('COMPONENT: ABOUT:', this.props);
+    // console.log('COMPONENT: ABOUT:', this.props);
 
     return (
       <div className="about-container">

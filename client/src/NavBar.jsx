@@ -54,7 +54,7 @@ class NavBar extends Component {
   }
 
   render() {
-    console.log('COMPONENT:NAVBAR', typeof spotifyLogo);
+    // console.log('COMPONENT:NAVBAR', typeof spotifyLogo);
     return (
       <React.Fragment>
         <div className="nav-bar-container">

@@ -8,7 +8,7 @@ const getArtistInfo = callback => {
   axios
     .get(`/artists/${Math.floor(Math.random() * 99 + 1)}`)
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
       callback(response.data[0]);
     })
     .catch(error => {
@@ -34,7 +34,7 @@ class App extends Component {
 
   handleFollowToggle(event) {
     event.preventDefault();
-    console.log('###FOLLOW CLICK###');
+    // console.log('###FOLLOW CLICK###');
     this.setState(prevState => {
       // NOTE: trick when you wanto update a part of an object.
       return {
