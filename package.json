@@ -6,7 +6,6 @@
   "license": "UNLICENSED",
   "scripts": {
     "seed": "node database/seeder.js",
-    "bundle": "webpack -w --config webpack.dev.js",
     "start": "nodemon server/index.js",
     "dev": "node server/index.js",
     "test": "jest --watch",
