@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://david:password1234@ds111113.mlab.com:11113/spotify-header');
+mongoose.connect(require('../config/mlab.js'));
 
 const db = mongoose.connection;
 db.on('error', error => {

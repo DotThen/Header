@@ -1,5 +1,8 @@
 TODO
 
+## config
+config/
+
 ## git rm -r --cached jestOutput ##
 jestOutput/
 

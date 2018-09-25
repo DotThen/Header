@@ -25,9 +25,9 @@ for (let i = 1; i <= 100; i++) {
 
   var obj = {};
   for (let i = 1; i <= faker.random.number({ min: 2, max: 10 }); i++) {
-    obj[faker.random.number({ min: 1, max: 27 })] = faker.random.number({ min: 1, max: 27 });
+    obj[faker.random.number({ min: 1, max: 27 })] = null;
   }
-  Object.values(obj).forEach(num => {
+  Object.keys(obj).forEach(num => {
     newArtist.artistImages.push(`https://s3-us-west-1.amazonaws.com/spotifycloneartists/photos/${num}.jpg`);
   });
 
