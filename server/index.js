@@ -2,8 +2,10 @@ const path = require('path');
 const express = require('express');
 const cors = require('cors');
 require('console-stamp')(console, 'HH:MM:ss.l');
-
+const bodyParser = require('body-parser');
+const HeaderDB = require('../database/index.js');
 const app = express();
+app.use(bodyParser.json());
 app.use(require('morgan')('short'));
 app.use(cors());
 // *************webpack-hot-middleware set-up*******************
@@ -31,9 +33,7 @@ app.use(cors());
 // );
 // SOURCE: https://github.com/webpack-contrib/webpack-hot-middleware/tree/master/example
 // ************************************
-const bodyParser = require('body-parser');
-const HeaderDB = require('../database/index.js');
-app.use(bodyParser.json());
+
 // app.use(express.static(__dirname + '/../public/dist'));
 
 // Upon GET request to '/artist/:artistID', queries the HeaderDB (mongoDB) and sends back artistObj.
@@ -49,9 +49,45 @@ app.get('/artists/:artistID', (req, res) => {
     res.status(400).send({ ERROR: 'artistID parameter accepts numbers between 1 and 100' });
   }
 });
-app.post('/artists/:artistID', (req, res) => {
-  res.status(400).send({ ERROR: 'does not accept post request' });
+
+app.post('/artists/newArtist', (req, res, next) => {
+  let newArtist = new HeaderDB({
+    artistID: req.body.id,
+    followed: req.body.followed,
+    artistName: req.body.name,
+    followersNumber: req.body.followersNumber,
+    about: {
+      biography: req.body.biography,
+      Where: req.body.location
+    }
+  })
+  newArtist.save(function (err, newArtist) {
+    if (err) {
+      res.status(400).send({ ERROR: 'does not accept post request' });
+      return next(err)
+    }
+    res.json(201, newArtist);
+  })
 });
+
+app.put('/artists/:artistID/update', function (req, res) {
+  HeaderDB.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, HeaderDB) => {
+    if(err) {
+      res.status(500);
+    }
+    res.send(HeaderDB)
+  })
+})
+
+app.delete('/artists/:artistID/delete', function (req, res) {
+  HeaderDB.findByIdAndRemove({_id: req.body.id}, (err) =>{
+    if (err) {
+      res.status(500).send(err);
+    }
+    res.status(200)
+  })  
+})
+
 app.listen(process.env.PORT || 3004, function onStart(err) {
   if (err) {
     console.log(err);
